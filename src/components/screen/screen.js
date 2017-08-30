@@ -5,7 +5,7 @@ class Screen extends Component {
   render(){
     return (
       <div>
-        07734
+        {this.props.screenDisplay}
       </div>
     );
   }

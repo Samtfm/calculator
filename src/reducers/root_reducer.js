@@ -5,7 +5,7 @@ import screenReducer from './screen_reducer';
 const RootReducer = combineReducers({
 //  currentValue: currentValueReducer,
   memory: memoryReducer,
-  screen: screenReducer
+  screenDisplay: screenReducer
 });
 
 export default RootReducer;
