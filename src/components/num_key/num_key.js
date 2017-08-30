@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 class NumKey extends Component {
   press(){
     console.log(this.props.val);
+    this.props.pushDigit(this.props.val);
   }
   render(){
     return (

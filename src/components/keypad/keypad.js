@@ -7,21 +7,21 @@ class Keypad extends Component {
     return (
       <div>
         <div className='key-row'>
-          <NumKey val={7}/>
-          <NumKey val={8}/>
-          <NumKey val={9}/>
+          <NumKey val={7} pushDigit={this.props.pushDigit}/>
+          <NumKey val={8} pushDigit={this.props.pushDigit}/>
+          <NumKey val={9} pushDigit={this.props.pushDigit}/>
         </div>
         <div className='key-row'>
-          <NumKey val={4}/>
-          <NumKey val={5}/>
-          <NumKey val={6}/>
+          <NumKey val={4} pushDigit={this.props.pushDigit}/>
+          <NumKey val={5} pushDigit={this.props.pushDigit}/>
+          <NumKey val={6} pushDigit={this.props.pushDigit}/>
         </div>
         <div className='key-row'>
-          <NumKey val={1}/>
-          <NumKey val={2}/>
-          <NumKey val={3}/>
+          <NumKey val={1} pushDigit={this.props.pushDigit}/>
+          <NumKey val={2} pushDigit={this.props.pushDigit}/>
+          <NumKey val={3} pushDigit={this.props.pushDigit}/>
         </div>
-        <NumKey val={0}/>
+        <NumKey val={0} pushDigit={this.props.pushDigit}/>
       </div>
     );
   }
