@@ -1,0 +1,20 @@
+.display{
+  width: 264px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+  font-size: 20px;
+
+}
+.number{
+  vertical-align: center;
+  width: 72%;
+  text-align: right;
+}
+.operation-name{
+  width: 28%;
+  text-align: center;
+  color: gray;
+}
