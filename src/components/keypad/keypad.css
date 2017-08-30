@@ -14,6 +14,6 @@
   background-color: rgb(220,210,230);
 }
 .key-row button:hover{
-  box-shadow: 0 0 4px 4px rgba(180, 190, 180, .2);
+  box-shadow: 0 0 4px 4px rgba(180, 190, 180, .1);
   background-color: rgb(220,215,230);
 }
