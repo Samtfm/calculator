@@ -31,7 +31,7 @@ class Keypad extends Component {
         <div className='key-row'>
           <NumKey val={0} pushDigit={this.props.pushDigit}/>
           <NumKey val={'.'} pushDigit={this.props.pushDigit}/>
-          <button>=</button>
+          <OperationKeyContainer name='=' />
           <OperationKeyContainer name='+'
             operation={(a, b) => a + b} />
         </div>

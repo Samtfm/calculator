@@ -5,10 +5,14 @@ class OperationKey extends Component {
     if (this.props.typing) {
       this.props.evaluate();
     }
-    this.props.setOperation({
-      func: this.props.operation,
-      name: this.props.name
-    });
+    if (this.props.operation) {
+      this.props.setOperation({
+        func: this.props.operation,
+        name: this.props.name
+      });
+    } else {
+      this.props.setOperation({});
+    }
   }
   render(){
     return (
