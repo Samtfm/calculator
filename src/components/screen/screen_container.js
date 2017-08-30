@@ -3,7 +3,7 @@ import Screen from './screen';
 // import { pushDigit } from '../../actions/screen_actions';
 
 const mapStateToProps = state => ({
-  screenDisplay: state.screenDisplay
+  screenDisplay: state.screenDisplay.number
 });
 
 const mapDispatchToProps = (dispatch) => ({

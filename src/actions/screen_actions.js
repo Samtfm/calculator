@@ -11,3 +11,11 @@ export const pushDigit = (value) => ({
   type: PUSH_DIGIT,
   value
 });
+
+export const SET_OPERATION = "SET_OPERATION";
+
+export const setOperation = (operation) => ({
+  type: SET_OPERATION,
+  func: operation.func,
+  name: operation.name
+});
