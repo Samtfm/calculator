@@ -5,10 +5,10 @@ const ScreenReducer = (state = "0", action) => {
     case SET_SCREEN:
       return `${action.value}`;
     case PUSH_DIGIT:
-      if (state === "0" && action.value !== '.'){
-        return `${action.value}`;
+      if (action.value === '.') {
+        return state.includes('.') ? state : state + `${action.value}`;
       } else {
-        return state + `${action.value}`;
+        return state === "0" ? `${action.value}` : state + `${action.value}`;
       }
     default:
       return state;

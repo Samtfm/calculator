@@ -21,7 +21,11 @@ class Keypad extends Component {
           <NumKey val={2} pushDigit={this.props.pushDigit}/>
           <NumKey val={3} pushDigit={this.props.pushDigit}/>
         </div>
-        <NumKey val={0} pushDigit={this.props.pushDigit}/>
+        <div className='key-row'>
+          <NumKey val={0} pushDigit={this.props.pushDigit}/>
+          <NumKey val={'.'} pushDigit={this.props.pushDigit}/>
+
+        </div>
       </div>
     );
   }
