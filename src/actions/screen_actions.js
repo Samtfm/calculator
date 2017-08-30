@@ -19,3 +19,9 @@ export const setOperation = (operation) => ({
   func: operation.func,
   name: operation.name
 });
+
+export const EVALUATE = "EVALUATE";
+
+export const evaluate = (operation) => ({
+  type: EVALUATE
+});

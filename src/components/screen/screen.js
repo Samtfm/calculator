@@ -5,7 +5,13 @@ class Screen extends Component {
   render(){
     return (
       <div>
-        {this.props.screenDisplay}
+        <span className='number'>
+          {this.props.number}
+
+        </span>
+        <span className='operation-name'>
+          {this.props.operationName}
+        </span>
       </div>
     );
   }

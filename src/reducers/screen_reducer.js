@@ -1,10 +1,14 @@
-import { SET_SCREEN, PUSH_DIGIT, SET_OPERATION } from '../actions/screen_actions';
+import { SET_SCREEN, PUSH_DIGIT, SET_OPERATION, EVALUATE } from '../actions/screen_actions';
 import merge from 'lodash/merge';
 
-const applyOperation = (prevNum, state, func) => {
+const applyOperation = (prevNum, newNum, func) => {
   const a = Number(prevNum);
-  const b = Number(state);
-  return func(a,b);
+  const b = Number(newNum);
+  if (func) {
+    return `${func(a,b)}`;
+  } else {
+    return newNum;
+  }
 };
 const ScreenReducer = (state = {number: "0", typing: true}, action) => {
   Object.freeze(state);
@@ -14,7 +18,6 @@ const ScreenReducer = (state = {number: "0", typing: true}, action) => {
       newState.number = `${action.value}`;
       return newState;
     case PUSH_DIGIT:
-      console.log(state)
       if (!state.typing) {
         newState.number = "0";
         newState.typing = true;
@@ -35,6 +38,11 @@ const ScreenReducer = (state = {number: "0", typing: true}, action) => {
       newState.operationFunc = action.func;
       newState.operationName = action.name;
       newState.prevNum = state.number;
+      return newState;
+    case EVALUATE:
+      newState.typing = false;
+      console.log(newState)
+      newState.number = applyOperation(newState.prevNum, newState.number, newState.operationFunc);
       return newState;
     default:
       return state;
